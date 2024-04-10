@@ -49,5 +49,58 @@ public class Main {
             System.out.printf("Месяц %s, сумма накоплений %.2f\n", monthToWait, depositInBankForGrow);
         }
         System.out.printf("Нужно копить %s месяцев\n", monthToWait);
+
+        //Задача5
+        System.out.println("\n\nЗадача 5");
+        double depositInBankForGrowEverySix = 15_000;
+        double financeGoalVasiliyEverySix = 12_000_000;
+        int bankPercentEverySix = 7;
+        int monthToWaitEverySix = 0;
+        while (depositInBankForGrowEverySix < financeGoalVasiliyEverySix) {
+            depositInBankForGrowEverySix += depositInBankForGrowEverySix * bankPercentEverySix / 100;
+            monthToWaitEverySix ++;
+            if (monthToWaitEverySix % 6 == 0) {
+                System.out.printf("Месяц %s, сумма накоплений %.2f\n", monthToWaitEverySix, depositInBankForGrowEverySix);
+            }
+        }
+        System.out.printf("Нужно копить %s месяцев\n", monthToWait);
+
+        //Задача6
+        System.out.println("\n\nЗадача 6");
+        double depositInBankNineYears = 15_000;
+        int stockPeriod = 9;
+        int stockPeriodInMonth = stockPeriod * 12;
+        int bankPercentNineYears = 7;
+        int monthToWaitNineYears = 0;
+        while (monthToWaitNineYears < stockPeriodInMonth) {
+            depositInBankNineYears += depositInBankNineYears * bankPercentNineYears / 100;
+            monthToWaitNineYears ++;
+            if (monthToWaitNineYears % 6 == 0) {
+                System.out.printf("Месяц %s, сумма накоплений %.2f\n", monthToWaitNineYears, depositInBankNineYears);
+            }
+        }
+        System.out.printf("Нужно копить %s месяцев\n", monthToWaitNineYears);
+
+        //Задача7
+        System.out.println("\n\nЗадача 7");
+        int firstFriday = 5;
+        int dayPerMonth = 31;
+        while (firstFriday <= dayPerMonth) {
+            System.out.printf("Сегодня пятница, %s-е число. Необходимо подготовить отчет\n", firstFriday);
+            firstFriday += 7;
+        }
+
+        //Задача8
+        System.out.println("\n\nЗадача 8");
+        int currentYear = 2024;
+        int hundredAhead = currentYear + 100;
+        int twoHundredBack = currentYear - 200;
+        int yearCount = twoHundredBack;
+        while (yearCount <= hundredAhead) {
+            if (yearCount % 79 == 0) {
+                System.out.println(yearCount);
+            }
+            yearCount ++;
+        }
     }
 }
