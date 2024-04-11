@@ -7,7 +7,6 @@ public class Main {
         int financeGoal = 2_459_000;
         int month = 0;
         while (depositInBank < financeGoal) {
-            depositInBank += depositInBank / 100;
             depositInBank += savingForGrow;
             month ++;
             }
@@ -26,7 +25,7 @@ public class Main {
         //Задача 3
         System.out.println("\n\nЗадача 3");
         int population = 12_000_000;
-        int birthRatePerThousand = 12;
+        int birthRatePerThousand = 17;
         int deathRatePerThousand = 8;
         int birthTotal = 0;
         int deathTotal = 0;
